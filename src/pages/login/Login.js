@@ -34,7 +34,6 @@ const Login = () => {
   return (
     <div className="container">
       <h1>Login</h1>
-      <p>Fill the fields to continue</p>
       <Formik initialValues={{}} onSubmit={handleSubmit} validationSchema={validations}>
         <Form className="Login">
           <div className="Login-Group">
