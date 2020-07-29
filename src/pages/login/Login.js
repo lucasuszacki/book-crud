@@ -12,25 +12,27 @@ const Login = () => {
 
   const handleSubmit = async values => {
     try {
-      const { data } = await login(values);
-      console.log("Response: ", data);
-  
+      const { data } = await login(values);  
       if(data.access_token){
         localStorage.setItem('app-token', data.access_token)
         history.push('/')
       }
+      else {
+        alert('E-mail ou senha incorreto.')
+      }
     } catch (error) {
       console.log("Error: ", error);
+      alert('E-mail ou senha incorreto.')
     }
   }
 
   const validations = yup.object().shape({
-    email: yup.string().email().required(),
-    password: yup.string().min(8).required()
+    email: yup.string().email('E-mail inválido').required('Campo Obrigatório'),
+    password: yup.string().min(8).required('Campo Obrigatório')
   })
 
   return (
-    <>
+    <div className="container">
       <h1>Login</h1>
       <p>Fill the fields to continue</p>
       <Formik initialValues={{}} onSubmit={handleSubmit} validationSchema={validations}>
@@ -46,7 +48,7 @@ const Login = () => {
           <button className="Login-Btn" type="submit">Login</button>
         </Form>
       </Formik>
-    </>
+    </div>
   )
 }
 

@@ -1,0 +1,86 @@
+table {
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th,
+td {
+  padding: 6px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+th {
+  color: #ffffff;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba;
+  opacity: 1; /* Firefox */
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+
+.Add-Btn {
+  background: #1FD572;
+  color: #ffffff;
+  padding: .5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.Add-Btn:hover {
+  cursor: pointer;
+}
+
+.Edit-Btn {
+  background: #4594e3;
+  color: #ffffff;
+  padding: .5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  margin: 1px;
+}
+
+.Edit-Btn:hover {
+  cursor: pointer;
+}
+
+.Remove-Btn {
+  background: #dc3545;
+  color: #ffffff;
+  padding: .5rem 2rem;
+  border: none;
+  border-radius: 5px;
+  margin: 1px;
+}
+
+.Remove-Btn:hover {
+  cursor: pointer;
+}
+
+.Input-Field {
+  border: none;
+  background: rgba(0, 0, 0, .25);
+  color: #fdfdfd;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 7px;
+  width: 100%;
+  transition: all .1s linear;
+}
+
+.Input-Field:focus {
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .5);
+  outline: none;
+}
